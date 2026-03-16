@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Candidate Dashboard</h1>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h2>Internship Alerts</h2>
+                <div class="job-list">
+                    <div class="job-item">
+                        <h3>Software Intern</h3>
+                        <p><strong>Required Skills:</strong> Python, HTML</p>
+                        <button class="btn-small">Apply</button>
+                    </div>
+                    <div class="job-item">
+                        <h3>Data Analyst Intern</h3>
+                        <p><strong>Required Skills:</strong> SQL, Python</p>
+                        <button class="btn-small">Apply</button>
+                    </div>
+                    <div class="job-item">
+                        <h3>Web Developer Intern</h3>
+                        <p><strong>Required Skills:</strong> HTML, CSS, JavaScript</p>
+                        <button class="btn-small">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>AI Interview Assistant</h2>
+                <p class="info-text">Practice interview questions based on your resume.</p>
+                <div class="interview-section">
+                    <div class="question-box">
+                        <strong>Sample Question:</strong>
+                        <p>Explain the difference between Python lists and tuples.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="answer">Your Answer</label>
+                        <textarea id="answer" rows="4" placeholder="Type your answer here..."></textarea>
+                    </div>
+                    <button class="btn-small">Submit</button>
+                    <div class="feedback-box">
+                        <p><strong>Score:</strong> 7/10</p>
+                        <p><strong>Suggestion:</strong> Improve explanation of Python concepts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Application Status / Notifications</h2>
+                <div class="notification-list">
+                    <div class="notification success">
+                        <p>You have been selected for the next round for Software Intern.</p>
+                    </div>
+                    <div class="notification rejected">
+                        <p>Your application for Data Analyst Intern was rejected.</p>
+                    </div>
+                    <div class="notification pending">
+                        <p>Your application for Web Developer Intern is under review.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

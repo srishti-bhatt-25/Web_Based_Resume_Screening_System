@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>HR Dashboard</h1>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card full-width">
+                <h2>Post Jobs</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" placeholder="e.g., Software Intern" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="required-skills">Required Skills</label>
+                        <input type="text" id="required-skills" placeholder="e.g., Python, HTML, CSS" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="screening-rule">Screening Rule</label>
+                        <textarea id="screening-rule" rows="3" placeholder='e.g., SKILLS contains "Python" AND CGPA >= 7' required></textarea>
+                    </div>
+                    <button type="button" class="btn" onclick="alert('Job posted successfully!')">Post Job</button>
+                </form>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Applied Candidates</h2>
+                <div class="candidate-list">
+                    <div class="candidate-item">
+                        <p>Rahul Sharma</p>
+                        <small>Skills: Python, HTML, CSS | CGPA: 8.5</small>
+                    </div>
+                    <div class="candidate-item">
+                        <p>Aditi Singh</p>
+                        <small>Skills: Java, SQL | CGPA: 6.8</small>
+                    </div>
+                    <div class="candidate-item">
+                        <p>Aman Verma</p>
+                        <small>Skills: Python, JavaScript | CGPA: 7.9</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Accepted Candidates (Rule Passed)</h2>
+                <div class="candidate-list accepted">
+                    <div class="candidate-item">
+                        <p>Rahul Sharma</p>
+                        <small>Skills: Python, HTML, CSS | CGPA: 8.5</small>
+                    </div>
+                    <div class="candidate-item">
+                        <p>Aman Verma</p>
+                        <small>Skills: Python, JavaScript | CGPA: 7.9</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Rejected Candidates</h2>
+                <div class="candidate-list rejected">
+                    <div class="candidate-item">
+                        <p>Aditi Singh</p>
+                        <small>Skills: Java, SQL | CGPA: 6.8</small>
+                        <small class="reject-reason">Reason: CGPA below threshold</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

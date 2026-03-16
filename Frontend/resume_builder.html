@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Resume Builder</h1>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="e.g., Rahul Sharma" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="e.g., rahul@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <input type="text" id="education" placeholder="e.g., B.Tech Computer Science" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" placeholder="e.g., Python, HTML, CSS" required>
+                </div>
+                <div class="form-group">
+                    <label for="projects">Projects</label>
+                    <textarea id="projects" rows="4" placeholder="Describe your projects..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cgpa">CGPA</label>
+                    <input type="number" id="cgpa" step="0.01" min="0" max="10" placeholder="e.g., 8.5" required>
+                </div>
+                <a href="choose_template.html" class="btn">Next</a>
+            </form>
+            <div class="back-link">
+                <a href="upload_resume.html">Back to Upload Page</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
