@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #dbeeff;
+        }
+
+        .box {
+            width: 400px;
+            margin: 60px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        button {
+            background: skyblue;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            background: #f5fbff;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>HR Dashboard</h2>
+
+<form method="POST">
+    <input name="role" placeholder="Job Role">
+    <textarea name="dsl" placeholder="Required Skills"></textarea>
+    <button>Post Job</button>
+</form>
+
+<h3>Posted Jobs</h3>
+<ul>
+{% for j in jobs %}
+    <li><b>{{ j[1] }}</b> → {{ j[2] }}</li>
+{% endfor %}
+</ul>
+
+<h3>Applications</h3>
+<ul>
+{% for a in apps %}
+    <li>
+        👤 
+        <a href="{{ a[2] }}" target="_blank">
+            <b>{{ a[1] }}</b>
+        </a>
+        → {{ a[3] }}
+
+        <br>
+        Status: <b>{{ a[4] }}</b>
+
+        <br>
+        <a href="/status/{{ a[0] }}/Accepted">Accept</a>
+        <a href="/status/{{ a[0] }}/Rejected">Reject</a>
+    </li>
+{% endfor %}
+</ul>
+
+<br>
+<a href="/logout">Logout</a>
+
+</div>
+
+</body>
+</html>

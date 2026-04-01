@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #dbeeff;
+            
+        }
+
+        .box {
+            width: 320px;
+            margin: 80px auto;
+            padding: 20px;
+            background: white;
+        }
+
+        input, select, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        button {
+            background: skyblue;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Register</h2>
+
+<form method="POST">
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <input name="linkedin" placeholder="LinkedIn URL">
+
+    <select name="role">
+        <option value="candidate">Candidate</option>
+        <option value="hr">HR</option>
+    </select>
+
+    <button>Register</button>
+</form>
+
+<a href="/">Back to Login</a>
+
+</div>
+
+</body>
+</html>

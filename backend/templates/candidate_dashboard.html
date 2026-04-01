@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #dbeeff;
+        }
+
+        .box {
+            width: 350px;
+            margin: 80px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        button {
+            background: skyblue;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Candidate Dashboard</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="resume">
+    <textarea name="dsl" placeholder="python sql"></textarea>
+    <button>Submit</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <p>{{ messages[0] }}</p>
+  {% endif %}
+{% endwith %}
+
+<h3>Jobs</h3>
+
+{% if jobs %}
+<ul>
+{% for j in jobs %}
+    <li>{{ j[1] }} <a href="/apply/{{ j[0] }}">Apply</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No jobs</p>
+{% endif %}
+
+<h3>Status</h3>
+
+{% for a in applied_jobs %}
+<p>{{ a[0] }} → {{ a[1] }}</p>
+{% endfor %}
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</body>
+</html>
